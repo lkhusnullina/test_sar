@@ -1,0 +1,39 @@
+.cardPage__block {
+    margin-top: 100px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    color: #ffffff;
+}
+
+.cardPage__title {
+    font-size: 64px;
+}
+
+.cardPage__image {
+    padding: 40px;
+    width: 290px;
+    height: 400px;
+    background-color: rgb(255 255 255 / 76%);
+    border-radius: 20px;
+}
+
+.cardPage__description {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: center;
+    gap: 30px;
+}
+
+.cardPage__text {
+    font-size:34px;
+}
+
+.cardPage__link {
+    font-size: 24px;
+    color: #6f59b6;
+    text-decoration: none;
+}

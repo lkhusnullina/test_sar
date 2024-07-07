@@ -1,0 +1,17 @@
+.notfound__block {
+    margin-top: 150px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.notfound__title {
+    font-size: 54px;
+    color: #4827b5;
+}
+
+.notfound__link {
+    font-size: 34px;
+    color: #6f59b6;
+}
