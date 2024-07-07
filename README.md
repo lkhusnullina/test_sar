@@ -4,7 +4,7 @@
 
 ### Деплой проекта: https://lkhusnullina.github.io/test_sar/
 
-![alt text](image.png)
+![alt text](image-1.png)
 
 ### Технологии: 
 React redux typescript
