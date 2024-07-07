@@ -2,7 +2,7 @@
   "name": "test_sar",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://lkhusnullina.github.io/test_sar",
+  "homepage": "https://lkhusnullina.github.io/test_sar/",
   "dependencies": {
     "@reduxjs/toolkit": "^2.2.6",
     "@testing-library/jest-dom": "^5.17.0",
