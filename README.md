@@ -2,10 +2,12 @@
 
 Задание: Создать SPA со списком карточек, на каждой из которых выводится картинка и любая информация
 
-### Деплой проекта: 
+### Деплой проекта: https://lkhusnullina.github.io/test_sar/
+
+![alt text](image.png)
 
 ### Технологии: 
-React redus typescript
+React redax typescript
 
 #### Запуск проекта
 
