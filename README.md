@@ -7,7 +7,7 @@
 ![alt text](image.png)
 
 ### Технологии: 
-React redax typescript
+React redux typescript
 
 #### Запуск проекта
 
