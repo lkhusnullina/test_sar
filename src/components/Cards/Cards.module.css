@@ -24,4 +24,10 @@
 
 .favoriteCards__button_active {
     background-color: #7a17e4;
+    color: #ffffff;
+}
+
+.cards__span {
+    color: #ffffff;
+    font-size: 24px;
 }

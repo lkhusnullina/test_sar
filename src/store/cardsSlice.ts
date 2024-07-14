@@ -1,34 +1,37 @@
-import { createSlice } from "@reduxjs/toolkit";
+import { createSlice, PayloadAction } from "@reduxjs/toolkit";
 import { ICard } from "models/iCard";
 
 export type CardsState = {
-  cards: ICard[]
+  cards: ICard[];
+  isLoading: boolean;
+}
+
+const initialState: CardsState = {
+  cards: [],
+  isLoading: true,
 }
 
 const cardsSlice = createSlice({
   name: 'cards',
-  initialState: {
-    cards: [],
-    isLoading: true,
-  },
+  initialState: initialState,
   reducers: {
-    setCards(state, action) {
-      state.cards = action.payload.cards;
+    setCards(state, action: PayloadAction<ICard[]>) {
+      state.cards = action.payload;
       state.isLoading = false;
     },
-    removeCard(state, action) {
+    removeCard(state, action: PayloadAction<string>) {
       state.cards = state.cards.filter((card: ICard) => card.id !== action.payload);
     },
-    likeCard(state, action) {
-      const cardId = action.payload.id;
+    likeCard(state, action: PayloadAction<string>) {
+      const cardId = action.payload;
       const card = state.cards.find((card: ICard) => card.id === cardId);
    
       if (card) {
         (card as ICard).isLiked = true;
       }
     },
-    dislikeCard(state, action){
-      const cardId = action.payload.id;
+    dislikeCard(state, action: PayloadAction<string>){
+      const cardId = action.payload;
       const card = state.cards.find((card: ICard) => card.id === cardId);
       if (card) {
         (card as ICard).isLiked = false;

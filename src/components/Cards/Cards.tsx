@@ -32,7 +32,7 @@ const Cards:FunctionComponent = () => {
         <>
             <button className={cn} onClick={favSwitcher}>Избранные карточки</button>
             <div className={styles.cards__block}>
-                {!filtred || filtred.length < 1 ? (fav ? <span>Нет избранных карточек</span> : <span>Нет данных</span>) :
+                {!filtred || filtred.length < 1 ? (fav ? <span className={styles.cards__span}>Нет избранных карточек</span> : <span className={styles.cards__span}>Нет данных</span>) :
                 filtred.map((card: ICard)=> <Card key={card.id} card={card}></Card>)}
             </div>
         </>

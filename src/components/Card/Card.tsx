@@ -1,8 +1,8 @@
+import { useAppDispatch } from "hooks";
 import styles from "./Card.module.css";
 import sprite from "img/sprite.svg";
 import {ICard} from "models/iCard";
 import { Link } from "react-router-dom";
-import { useDispatch } from "react-redux";
 import { dislikeCard, likeCard, removeCard } from "store/cardsSlice";
 
 type CardProps = {
@@ -10,7 +10,7 @@ type CardProps = {
 }
 
 const Card: React.FC<CardProps> = ({card}) => {
-    const dispatch = useDispatch();
+    const dispatch = useAppDispatch();
 
     const deleteCard = (event:React.MouseEvent<HTMLOrSVGElement>) => {
       event.preventDefault();
@@ -19,12 +19,12 @@ const Card: React.FC<CardProps> = ({card}) => {
 
     const handleAddCard = async (event:React.MouseEvent<HTMLOrSVGElement>) => {
       event.preventDefault();
-      dispatch(likeCard({id: card.id}));
+      dispatch(likeCard(card.id));
     }
     
     const handleDeleteCard = async (event:React.MouseEvent<HTMLOrSVGElement>) => {
       event.preventDefault();
-      dispatch(dislikeCard({id: card.id}));
+      dispatch(dislikeCard(card.id));
     }
 
     const toggleLike = card.isLiked ?  handleDeleteCard: handleAddCard ;
